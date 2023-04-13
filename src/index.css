@@ -65,4 +65,51 @@
 .z_index11{z-index: 11;}
 .z_index12{z-index: 12;}
 /* Transetion */
-tr{transition: all 300ms ease-in-out;}
+.transition300{transition: all 300ms ease-in-out;}
+.transition400{transition: all 400ms ease-in-out;}
+.transition500{transition: all 500ms ease-in-out;}
+@media (min-width:576px) {
+  :root{/* font size */
+--fs-xsm:14px;
+--fs-sm:16px;
+--fs-md:18px;
+--fs-lg:20px;
+--fs-2xl:24px;
+--fs-3xl:32px;
+--fs-4xl:44px;
+--fs-7xl:72px;} 
+}
+@media (min-width:768px) {
+  :root{/* font size */
+--fs-xsm:14px;
+--fs-sm:16px;
+--fs-md:18px;
+--fs-lg:20px;
+--fs-2xl:24px;
+--fs-3xl:32px;
+--fs-4xl:44px;
+--fs-7xl:72px;} 
+}
+@media (min-width:992px) {
+  :root{/* font size */
+--fs-xsm:14px;
+--fs-sm:16px;
+--fs-md:18px;
+--fs-lg:20px;
+--fs-2xl:24px;
+--fs-3xl:32px;
+--fs-4xl:44px;
+--fs-7xl:72px;}
+  
+}
+@media (min-width:1200px) {
+  :root{/* font size */
+--fs-xsm:14px;
+--fs-sm:16px;
+--fs-md:18px;
+--fs-lg:20px;
+--fs-2xl:24px;
+--fs-3xl:32px;
+--fs-4xl:44px;
+--fs-7xl:72px;}
+}
