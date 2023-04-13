@@ -63,9 +63,9 @@ function Header() {
                 src={waves}
                 alt="img-waves"
               />
-              <div className="py-4 d-flex justify-content-between height_1024 flex-column d-none d-xl-flex">
+              <div className="py-4  d-flex justify-content-between height_1024 flex-column d-none d-xl-flex">
                 <div className=" z_index2">
-                  <div className="pb-4 z_index2 ">
+                  <div className="pb-4 z_index2 ms-5">
                     <div className="d-flex justify-content-end pe-xl-5 me-3 pb-5">
                       <a href="#home">
                         <img className="z_index2" src={logo} alt="PAGE-logo" />
@@ -79,12 +79,14 @@ function Header() {
                     <div className="nav-tabs d-flex flex-column gap-3">
                       <div
                         className={
-                          activeTab ? "dashboard cursor_pointer" : "active"
+                          activeTab === "dashboard"
+                            ? "active"
+                            : "dashboard cursor_pointer"
                         }
                         onClick={() => handleTabClick("dashboard")}
                       >
                         {" "}
-                        <article className="marketplace_btn py-3 px-3 d-flex align-items-center mb-0">
+                        <article className="marketplace_btn cursor_pointer py-3 px-3 d-flex align-items-center mb-0">
                           <svg
                             className="me-3"
                             width="16"
@@ -140,7 +142,7 @@ function Header() {
                         }
                         onClick={() => handleTabClick("market")}
                       >
-                        <article className="marketplace_btn py-3 px-3 d-flex align-items-center mb-0">
+                        <article className="marketplace_btn cursor_pointer py-3 px-3 d-flex align-items-center mb-0">
                           <svg
                             className="me-3"
                             width="18"
@@ -181,7 +183,7 @@ function Header() {
                         }
                         onClick={() => handleTabClick("favorites")}
                       >
-                        <article className="marketplace_btn py-3 px-3 d-flex align-items-center mb-0">
+                        <article className="marketplace_btn cursor_pointer py-3 px-3 d-flex align-items-center mb-0">
                           <svg
                             className="me-3"
                             width="18"
@@ -446,7 +448,9 @@ function Header() {
                 </article>
                 <div
                   className={
-                    nav ? "threeline d-xl-none" : "threeline d-xl-none "
+                    nav
+                      ? "threeline d-xl-none cursor_pointer"
+                      : "threeline d-xl-none cursor_pointer"
                   }
                   onClick={() => setnav(!nav)}
                 >
@@ -471,7 +475,7 @@ function Header() {
                     <div className=" d-flex  h-100 flex-column ">
                       <div className="ps-xl-4">
                         <div className="z_index2 ">
-                          <div className="d-flex justify-content-start pe-xl-5 ps-3 pb-5">
+                          <div className="d-flex justify-content-center pe-xl-5 ps-3 pb-5">
                             <a href="#home">
                               <img
                                 className="z_index2"
@@ -844,7 +848,7 @@ function Header() {
               {activeTab === "dashboard" && (
                 <Row className="mt-4">
                   <div className="col-xl-8 col-md-7 h-100">
-                    <Row className="genesis_box ms-xl-2 ms-1 pt-lg-5 pb-4 pb-xl-0 h-100 position-relative">
+                    <Row className="genesis_box ms-xl-2 mx-1 pt-lg-5 pb-4 pb-xl-0 h-100 position-relative">
                       <img
                         onClick={() => myBtn.current.slickPrev()}
                         className="position-absolute arrow_left cursor_pointer d-none d-lg-flex"
@@ -1159,7 +1163,7 @@ function Header() {
                       <h2 className="ff_inter fw-semibold fs_xl text_tertiary mb-0">
                         Top Collections
                       </h2>
-                      <p className="ff_inter fw-semibold fs_md text_tertiary mb-0">
+                      <p className="ff_inter cursor_pointer fw-semibold fs_md text_tertiary mb-0">
                         View All
                         <span>
                           <img src={arrow} alt="arrow-right" />
@@ -1233,21 +1237,21 @@ function Header() {
                       </div>
                     </div>
                   </Row>
-                  <div className="d-flex justify-content-between d-md-none align-content-center">
+                  <div className="d-flex justify-content-between d-md-none align-content-center ps-3">
                     <h2 className="ff_inter fw-semibold fs_xl text_tertiary mb-0">
                       Top Collections
                     </h2>
-                    <p className="ff_inter fw-semibold fs_md text_tertiary mb-0">
+                    <p className="ff_inter cursor_pointer fw-semibold fs_md text_tertiary mb-0">
                       View All
                       <span>
                         <img src={arrow} alt="arrow-right" />
                       </span>
                     </p>
                   </div>
-                  <Carousel className="d-md-none ">
-                    <Carousel.Item>
-                      <Row>
-                        <div className="col-lg-4 col-sm-6 mt-3 d-flex">
+                  <Carousel className="d-md-none ps-3 mt-3">
+                    <Carousel.Item className=" px-2">
+                      <Row className=" bg_light_white">
+                        <div className="col-lg-4 col-sm-6 d-flex">
                           <div className=" position-relative overflow-hidden rounded-4">
                             <div className="overlay position-absolute d-flex justify-content-center flex-column align-items-center pb-2">
                               <img
@@ -1269,7 +1273,7 @@ function Header() {
                             />
                           </div>
                         </div>
-                        <div className="col-lg-4 col-sm-6 mt-3  d-none d-sm-flex">
+                        <div className="col-lg-4 col-sm-6  d-none d-sm-flex">
                           <div className=" position-relative overflow-hidden rounded-4">
                             <div className="overlay position-absolute d-flex justify-content-center flex-column align-items-center pb-2">
                               <img
@@ -1293,9 +1297,9 @@ function Header() {
                         </div>
                       </Row>
                     </Carousel.Item>
-                    <Carousel.Item>
-                      <Row>
-                        <div className="col-lg-4 col-sm-6 mt-3">
+                    <Carousel.Item className=" px-2">
+                      <Row className=" bg_light_white">
+                        <div className="col-lg-4 col-sm-6">
                           <div className=" position-relative overflow-hidden rounded-4">
                             <div className="overlay position-absolute d-flex justify-content-center flex-column align-items-center pb-2">
                               <img
@@ -1317,7 +1321,7 @@ function Header() {
                             />
                           </div>
                         </div>
-                        <div className="col-lg-4 col-sm-6 mt-3  d-none d-sm-flex">
+                        <div className="col-lg-4 col-sm-6 d-none d-sm-flex">
                           <div className=" position-relative overflow-hidden rounded-4">
                             <div className="overlay position-absolute d-flex justify-content-center flex-column align-items-center pb-2">
                               <img
@@ -1341,9 +1345,9 @@ function Header() {
                         </div>
                       </Row>
                     </Carousel.Item>
-                    <Carousel.Item>
-                      <Row>
-                        <div className="col-lg-4 col-sm-6 mt-3">
+                    <Carousel.Item className=" px-2">
+                      <Row className=" bg_light_white">
+                        <div className="col-lg-4 col-sm-6">
                           <div className=" position-relative overflow-hidden rounded-4">
                             <div className="overlay position-absolute d-flex justify-content-center flex-column align-items-center pb-2">
                               <img
@@ -1365,7 +1369,7 @@ function Header() {
                             />
                           </div>
                         </div>
-                        <div className="col-lg-4 col-sm-6 mt-3 d-flex d-none d-sm-flex">
+                        <div className="col-lg-4 col-sm-6 d-flex d-none d-sm-flex">
                           <div className=" position-relative overflow-hidden rounded-4">
                             <div className="overlay position-absolute d-flex justify-content-center flex-column align-items-center pb-2">
                               <img
@@ -1395,7 +1399,7 @@ function Header() {
                       <h2 className="ff_inter fw-semibold fs_xl text_tertiary mb-0">
                         Trendings NFTs
                       </h2>
-                      <p className="ff_inter fw-semibold fs_md text_tertiary mb-0">
+                      <p className="ff_inter cursor_pointer fw-semibold fs_md text_tertiary mb-0">
                         View All
                         <span>
                           <img src={arrow} alt="arrow-right" />
@@ -1461,7 +1465,7 @@ function Header() {
                       </div>
                     </div>
                   </Row>{" "}
-                  <div className="d-flex justify-content-between mt-4 d-md-none">
+                  <div className="d-flex justify-content-between mt-5 d-md-none ps-3">
                     <h2 className="ff_inter fw-semibold fs_xl text_tertiary mb-0">
                       Trendings NFTs
                     </h2>
@@ -1472,10 +1476,10 @@ function Header() {
                       </span>
                     </p>
                   </div>
-                  <Carousel className="d-md-none">
-                    <Carousel.Item>
-                      <Row>
-                        <div className="col-lg-4 col-sm-6 mt-3">
+                  <Carousel className="d-md-none ps-3 mt-3">
+                    <Carousel.Item className=" px-2">
+                      <Row className=" bg_light_white">
+                        <div className="col-lg-4 col-sm-6">
                           <div className=" position-relative overflow-hidden rounded-4">
                             <div className="overlay position-absolute d-flex justify-content-center flex-column align-items-center pb-2">
                               <img
@@ -1497,7 +1501,7 @@ function Header() {
                             />
                           </div>
                         </div>
-                        <div className="col-lg-4 col-sm-6 mt-3 d-none d-sm-block">
+                        <div className="col-lg-4 col-sm-6 d-none d-sm-block">
                           <div className=" position-relative overflow-hidden rounded-4">
                             <div className="overlay position-absolute d-flex justify-content-center flex-column align-items-center pb-2">
                               <img
@@ -1521,9 +1525,9 @@ function Header() {
                         </div>
                       </Row>
                     </Carousel.Item>
-                    <Carousel.Item>
-                      <Row>
-                        <div className="col-lg-4 col-sm-6 mt-3">
+                    <Carousel.Item className=" px-2">
+                      <Row className=" bg_light_white">
+                        <div className="col-lg-4 col-sm-6">
                           <div className=" position-relative overflow-hidden rounded-4">
                             <div className="overlay position-absolute d-flex justify-content-center flex-column align-items-center pb-2">
                               <img
@@ -1545,7 +1549,7 @@ function Header() {
                             />
                           </div>
                         </div>
-                        <div className="col-lg-4 col-sm-6 mt-3 d-none d-sm-block">
+                        <div className="col-lg-4 col-sm-6 d-none d-sm-block">
                           <div className=" position-relative overflow-hidden rounded-4">
                             <div className="overlay position-absolute d-flex justify-content-center flex-column align-items-center pb-2">
                               <img
@@ -1569,13 +1573,13 @@ function Header() {
                         </div>
                       </Row>
                     </Carousel.Item>
-                    <Carousel.Item>
-                      <Row>
-                        <div className="col-lg-4 col-sm-6 mt-3">
+                    <Carousel.Item className=" px-2">
+                      <Row className=" bg_light_white">
+                        <div className="col-lg-4 col-sm-6">
                           <div className=" position-relative overflow-hidden rounded-4">
                             <div className="overlay position-absolute d-flex justify-content-center flex-column align-items-center pb-2">
                               <img
-                                className="dragan_img "
+                                className="dragan_img"
                                 src={last}
                                 alt="imgg-dragn"
                               />
@@ -1593,7 +1597,7 @@ function Header() {
                             />
                           </div>
                         </div>
-                        <div className="col-lg-4 col-sm-6 mt-3 d-none d-sm-block">
+                        <div className="col-lg-4 col-sm-6 d-none d-sm-block">
                           <div className=" position-relative overflow-hidden rounded-4">
                             <div className="overlay position-absolute d-flex justify-content-center flex-column align-items-center pb-2">
                               <img
